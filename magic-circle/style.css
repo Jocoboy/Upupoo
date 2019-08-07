@@ -1,0 +1,707 @@
+:root {
+    --flicker-color: #fff;
+    --background-color: #000;
+}
+
+body {
+    background: var(--background-color);
+    overflow: hidden;
+    user-select: none;
+    animation: circling-z 8s linear infinite normal;
+}
+
+.wrapper {
+    position: relative;
+    width: 512px;
+    height: 512px;
+    margin: 100px auto;
+}
+
+.circle-1 {
+    width: 500px;
+    height: 500px;
+    background: transparent;
+    border-radius: 50%;
+    border: 6px solid var(--flicker-color);
+    position: absolute;
+}
+
+.circle-2 {
+    width: 484px;
+    height: 484px;
+    background: transparent;
+    border-radius: 50%;
+    border: 2px solid var(--flicker-color);
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    animation: flicker-large 0.5s ease-out infinite alternate;
+}
+
+.c-line-container {
+    position: absolute;
+    width: 488px;
+    height: 488px;
+    top: 12px;
+    left: 12px;
+}
+
+.c-line-container .c-line {
+    position: absolute;
+    width: 2px;
+    height: 15px;
+    background: var(--flicker-color);
+}
+
+.c-line-rotate-1 {
+    top: 0px;
+    left: 244px;
+}
+
+.c-line-rotate-2 {
+    top: 9px;
+    left: 183px;
+    transform: rotateZ(-15deg);
+}
+
+.c-line-rotate-3 {
+    top: 31px;
+    left: 126px;
+    transform: rotateZ(-30deg);
+}
+
+.c-line-rotate-4 {
+    top: 68px;
+    left: 77px;
+    transform: rotateZ(-45deg);
+}
+
+.c-line-rotate-5 {
+    top: 117px;
+    left: 39px;
+    transform: rotateZ(-60deg);
+}
+
+.c-line-rotate-6 {
+    top: 175px;
+    left: 16px;
+    transform: rotateZ(-75deg);
+}
+
+.c-line-rotate-7 {
+    top: 235px;
+    left: 8px;
+    transform: rotateZ(-90deg);
+}
+
+.c-line-rotate-8 {
+    top: 296px;
+    left: 16px;
+    transform: rotateZ(-105deg);
+}
+
+.c-line-rotate-9 {
+    top: 354px;
+    left: 38px;
+    transform: rotateZ(-120deg);
+}
+
+.c-line-rotate-10 {
+    top: 404px;
+    left: 76px;
+    transform: rotateZ(-135deg);
+}
+
+.c-line-rotate-11 {
+    top: 441px;
+    left: 125px;
+    transform: rotateZ(-150deg);
+}
+
+.c-line-rotate-12 {
+    top: 465px;
+    left: 182px;
+    transform: rotateZ(-165deg);
+}
+
+.c-line-rotate-13 {
+    top: 472px;
+    left: 244px;
+    transform: rotateZ(-180deg);
+}
+
+.c-line-rotate-14 {
+    top: 464px;
+    left: 305px;
+    transform: rotateZ(-195deg);
+}
+
+.c-line-rotate-15 {
+    top: 441px;
+    left: 362px;
+    transform: rotateZ(-210deg);
+}
+
+.c-line-rotate-16 {
+    top: 403px;
+    left: 411px;
+    transform: rotateZ(-225deg);
+}
+
+.c-line-rotate-17 {
+    top: 354px;
+    left: 448px;
+    transform: rotateZ(-240deg);
+}
+
+.c-line-rotate-18 {
+    top: 297px;
+    left: 471px;
+    transform: rotateZ(-255deg);
+}
+
+.c-line-rotate-19 {
+    top: 236px;
+    left: 479px;
+    transform: rotateZ(-270deg);
+}
+
+.c-line-rotate-20 {
+    top: 175px;
+    left: 470px;
+    transform: rotateZ(-285deg);
+}
+
+.c-line-rotate-21 {
+    top: 118px;
+    left: 448px;
+    transform: rotateZ(-300deg);
+}
+
+.c-line-rotate-22 {
+    top: 70px;
+    left: 409px;
+    transform: rotateZ(-315deg);
+}
+
+.c-line-rotate-23 {
+    top: 33px;
+    left: 361px;
+    transform: rotateZ(-330deg);
+}
+
+.c-line-rotate-24 {
+    top: 9px;
+    left: 305px;
+    transform: rotateZ(-345deg);
+}
+
+.circle-3 {
+    width: 454px;
+    height: 454px;
+    background: transparent;
+    border-radius: 50%;
+    border: 2px solid var(--flicker-color);
+    position: absolute;
+    top: 27px;
+    left: 27px;
+    animation: flicker-large 1s ease-out infinite alternate;
+}
+
+.rectangle-container {
+    width: 512px;
+    height: 512px;
+    position: absolute;
+    top: 0;
+}
+
+.rectangle-1, .rectangle-2, .rectangle-3, .rectangle-4, .rectangle-5, .rectangle-6 {
+    background: transparent;
+    border: 1px solid var(--flicker-color);
+    position: absolute;
+    animation: flicker-small 0.5s ease-out infinite alternate;
+}
+
+.rectangle-1 {
+    width: 321px;
+    height: 321px;
+    top: 94px;
+    left: 95px;
+    transform: rotateZ(45deg);
+}
+
+.rectangle-2 {
+    width: 301px;
+    height: 301px;
+    top: 104px;
+    left: 105px;
+    transform: rotateZ(45deg);
+}
+
+.rectangle-3 {
+    width: 321px;
+    height: 321px;
+    top: 94px;
+    left: 95px;
+    transform: rotateZ(-15deg);
+}
+
+.rectangle-4 {
+    width: 301px;
+    height: 301px;
+    top: 104px;
+    left: 105px;
+    transform: rotateZ(-15deg);
+}
+
+.rectangle-5 {
+    width: 321px;
+    height: 321px;
+    top: 94px;
+    left: 95px;
+    transform: rotateZ(15deg);
+}
+
+.rectangle-6 {
+    width: 301px;
+    height: 301px;
+    top: 104px;
+    left: 105px;
+    transform: rotateZ(15deg);
+}
+
+.circle-4 {
+    width: 271px;
+    height: 271px;
+    background: transparent;
+    border-radius: 50%;
+    border: 2px solid var(--flicker-color);
+    position: absolute;
+    top: 119px;
+    left: 120px;
+}
+
+.rhombus-container {
+    position: absolute;
+    left: 23px;
+}
+
+.rhombus-1, .rhombus-2, .rhombus-3, .rhombus-4 {
+    background: transparent;
+    border: 3px solid var(--flicker-color);
+    position: absolute;
+}
+
+.rhombus-1 {
+    width: 100px;
+    height: 100px;
+    top: 203px;
+    left: 359px;
+    transform: rotateZ(45deg) skew(37deg, 37deg);
+}
+
+.rhombus-2 {
+    width: 79px;
+    height: 79px;
+    top: 213px;
+    left: 345px;
+    transform: rotateZ(135deg) skew(35deg, 35deg);
+}
+
+.rhombus-3 {
+    width: 60px;
+    height: 60px;
+    top: 223px;
+    left: 378px;
+    transform: rotateZ(-3deg) skew(20deg, 20deg);
+}
+
+.rhombus-4 {
+    width: 60px;
+    height: 60px;
+    top: 223px;
+    left: 378px;
+    transform: rotateZ(90deg) skew(20deg, 20deg);
+}
+
+.r-line-container .r-line {
+    position: absolute;
+    width: 2px;
+    background: var(--flicker-color);
+}
+
+.r-line-rotate-1 {
+    height: 250px;
+    top: 130px;
+    left: 411px;
+    transform: rotateZ(0deg);
+}
+
+.r-line-rotate-2 {
+    height: 180px;
+    top: 166px;
+    left: 380px;
+    transform: rotateZ(90deg);
+}
+
+.r-line-rotate-3 {
+    height: 122px;
+    top: 194px;
+    left: 409px;
+    transform: rotateZ(-48deg);
+}
+
+.r-line-rotate-4 {
+    height: 122px;
+    top: 196px;
+    left: 409px;
+    transform: rotateZ(45deg);
+}
+
+.r-circle-1, .r-circle-2 {
+    border: 2px solid transparent;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.r-circle-1 {
+    width: 70px;
+    height: 70px;
+    top: 219px;
+    left: 375px;
+    background: var(--flicker-color);
+}
+
+.r-circle-2 {
+    width: 64px;
+    height: 64px;
+    top: 222px;
+    left: 378px;
+    background: var(--background-color);
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    position: absolute;
+    border: 128.39px solid transparent;
+    border-top: 93.28px solid var(--flicker-color);
+}
+
+.triangle-small {
+    width: 0;
+    height: 0;
+    position: absolute;
+    display: block;
+    border: 115.55px solid transparent;
+    border-top: 83.95px solid var(--background-color);
+}
+
+.star-back, .star-front, .direction {
+    width: 512px;
+    height: 512px;
+    position: absolute;
+    top: 0;
+}
+
+.star-back-rotate-1 {
+    top: 124px;
+    left: 65px;
+    transform: rotateZ(108deg);
+}
+
+.star-back-rotate-2 {
+    top: 76px;
+    left: 131px;
+    transform: rotateZ(181deg);
+}
+
+.star-back-rotate-3 {
+    top: 121px;
+    left: 193px;
+    transform: rotateZ(251deg);
+}
+
+.star-back-rotate-4 {
+    top: 137px;
+    left: 84px;
+    transform: rotateZ(108deg);
+}
+
+.star-back-rotate-5 {
+    top: 94px;
+    left: 143px;
+    transform: rotateZ(181deg);
+}
+
+.star-back-rotate-6 {
+    top: 134px;
+    left: 199px;
+    transform: rotateZ(251deg);
+}
+
+.constellation {
+    position: absolute;
+    color: var(--flicker-color);
+    text-align: center;
+    width: 512px;
+    height: 512px;
+    top: 0;
+}
+
+.Aries {
+    position: absolute;
+    top: 448px;
+    left: 195px;
+    transform: rotateZ(195deg);
+    color: gold;
+    animation: circling-z 4s linear infinite normal;
+}
+
+.Taurus {
+    position: absolute;
+    top: 391px;
+    left: 100px;
+    transform: rotateZ(228deg);
+    color: blue;
+    animation: circling-z 4s linear infinite normal;
+}
+
+.Gemini {
+    position: absolute;
+    top: 298px;
+    left: 47px;
+    transform: rotateZ(255deg);
+    color: red;
+    animation: circling-z 4s linear infinite normal;
+}
+
+.Cancer {
+    position: absolute;
+    top: 190px;
+    left: 46px;
+    transform: rotateZ(288deg);
+    color: bisque;
+    animation: circling-z 4s linear infinite normal;
+}
+
+.Leo {
+    position: absolute;
+    top: 98px;
+    left: 99px;
+    transform: rotateZ(300deg);
+    color: orange;
+    animation: circling-z 4s linear infinite normal;
+}
+
+.Virgo {
+    position: absolute;
+    top: 42px;
+    left: 195px;
+    transform: rotateZ(345deg);
+    color: pink;
+    animation: circling-z 4s linear infinite normal;
+}
+
+.Libra {
+    position: absolute;
+    top: 41px;
+    left: 305px;
+    transform: rotateZ(375deg);
+    color: purple;
+    animation: circling-z 4s linear infinite normal;
+}
+
+.Scorpio {
+    position: absolute;
+    top: 97px;
+    left: 398px;
+    transform: rotateZ(400deg);
+    color: darkorchid;
+    animation: circling-z 4s linear infinite normal;
+}
+
+.Sagittarius {
+    position: absolute;
+    top: 190px;
+    left: 452px;
+    transform: rotateZ(390deg);
+    color: green;
+    animation: circling-z 4s linear infinite normal;
+}
+
+.Capricorn {
+    position: absolute;
+    top: 298px;
+    left: 453px;
+    transform: rotateZ(395deg);
+    color: yellow;
+    animation: circling-z 4s linear infinite normal;
+}
+
+.Aquarius {
+    position: absolute;
+    top: 393px;
+    left: 399px;
+    transform: rotateZ(315deg);
+    color: cyan;
+    animation: circling-z 4s linear infinite normal;
+}
+
+.Pisces {
+    position: absolute;
+    top: 448px;
+    left: 305px;
+    transform: rotateZ(340deg);
+    color: gray;
+    animation: circling-z 4s linear infinite normal;
+}
+
+.s-line-container {
+    position: absolute;
+    width: 512px;
+    height: 512px;
+    top: 0;
+    animation: rotate 3s linear 2s 1;
+}
+
+.s-line-container .s-line {
+    position: absolute;
+    width: 2px;
+    height: 137px;
+    background: var(--flicker-color);
+}
+
+.s-line-rotate-1 {
+    top: 136px;
+    left: 216px;
+    transform: rotateZ(-36deg);
+}
+
+.s-line-rotate-2 {
+    top: 136px;
+    left: 295px;
+    transform: rotateZ(36deg);
+}
+
+.s-line-rotate-3 {
+    top: 161px;
+    left: 380px;
+    transform: rotateZ(-72deg);
+    transform-origin: bottom;
+}
+
+.s-line-rotate-4 {
+    top: 248px;
+    left: 258px;
+    transform: rotateZ(-1deg);
+    transform-origin: bottom;
+}
+
+.s-line-rotate-5 {
+    top: 157px;
+    left: 130px;
+    transform: rotateZ(74deg);
+    transform-origin: bottom;
+}
+
+.star-front-rotate-1 {
+    transform: rotateZ(72deg);
+    top: 167px;
+    left: 63px;
+}
+
+.star-front-rotate-2 {
+    transform: rotateZ(-72deg);
+    top: 167px;
+    left: 195px;
+}
+
+.star-front-rotate-3 {
+    top: 215px;
+    left: 130px;
+}
+
+.star-front-rotate-4 {
+    transform: rotateZ(72deg);
+    top: 174px;
+    left: 82px;
+}
+
+.star-front-rotate-5 {
+    transform: rotateZ(-72deg);
+    top: 178px;
+    left: 200px;
+}
+
+.star-front-rotate-6 {
+    top: 219px;
+    left: 143px;
+}
+
+.d-circle {
+    width: 25px;
+    height: 25px;
+    background: var(--background-color);
+    border-radius: 50%;
+    border: 2px solid var(--flicker-color);
+    position: absolute;
+    color: var(--flicker-color);
+    text-align: center;
+    line-height: 25px;
+}
+
+.d-left {
+    top: 239px;
+    left: 0;
+    transform: rotateZ(90deg);
+    animation: circling-z 4s linear infinite normal;
+}
+
+.d-top {
+    top: 0;
+    left: 242px;
+    transform: rotateZ(180deg);
+    animation: circling-z 4s linear infinite normal;
+}
+
+.d-right {
+    top: 239px;
+    left: 483px;
+    transform: rotateZ(270deg);
+    animation: circling-z 4s linear infinite normal;
+}
+
+.d-bottom {
+    top: 483px;
+    left: 242px;
+    transform: rotateZ(360deg);
+    animation: circling-z 4s linear infinite normal;
+}
+
+@keyframes flicker-large {
+    0% {
+        box-shadow: 0 0 0 0 var(--flicker-color);
+    }
+    100% {
+        box-shadow: 0 0 90px 5px var(--flicker-color);
+    }
+}
+
+@keyframes flicker-small {
+    0% {
+        box-shadow: 0 0 0 0 var(--flicker-color);
+    }
+    100% {
+        box-shadow: 0 0 2px 2px var(--flicker-color);
+    }
+}
+
+@keyframes circling-z {
+    0% {
+        transform: rotateZ(0);
+    }
+    100% {
+        transform: rotateZ(360deg)
+    }
+}
