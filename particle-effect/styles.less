@@ -1,0 +1,58 @@
+@import "style.css";
+
+@backgroundColorList: #ff9955,
+    #ffb555,
+    #ffd255,
+    #ffee55,
+    #f4ff55,
+    #d7ff55,
+    #bbff55,
+    #9fff55,
+    #66ff55,
+    #55ff60,
+    #55ff7d,
+    #55ff99,
+    #55ffb5,
+    #55ffd2,
+    #55ffee,
+    #55f4ff,
+    #55d7ff,
+    #55bbff;
+
+.ring-loop(@n, @i: 1) when (@i <=@n) {
+    .ring-@{i} {
+        transform: rotateY(15deg*@i);
+    }
+
+    .ring-loop(@n, (@i+1));
+}
+
+.box-loop(@n, @i: 1) when (@i <=@n) {
+    .box-@{i} {
+        transform: rotateZ(10deg*@i)
+    }
+
+    .box-loop(@n, (@i+1));
+}
+
+.ball-loop(@n, @i: 1) when (@i <=@n) {
+    .box-@{i} {
+        .ball {
+            animation: pulsate 0.5s infinite 0s alternate both;
+        }
+
+        .ball when (@i<=18) {
+            background-color: extract(@backgroundColorList, @i);
+        }
+
+        .ball when (@i>18) {
+            background-color: extract(@backgroundColorList, 37-@i);
+        }
+    }
+
+    .ball-loop(@n, (@i+1));
+}
+
+.ring-loop(12);
+.box-loop(36);
+.ball-loop(36);
